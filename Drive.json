@@ -1,0 +1,18 @@
+{
+    "osName": "Minian v0.03",
+    "users": {
+        "ben": {
+            "dsplName": "Ben",
+            "password": "impw3rks",
+            "files": {
+                "type": "directory",
+                "content": {
+                    "test.bzz": {
+                        "type": "audio file",
+                        "content": "440 200-700 100"
+                    }
+                }
+            }
+        }
+    }
+}
