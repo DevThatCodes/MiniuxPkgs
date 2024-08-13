@@ -14,7 +14,7 @@ int main() {
         std::string cmd = "rm pkgs/" + arg + ".min";
         system(cmd.c_str());
     } else {
-        std::string cmd = "cd pkgs && wget " + arg;
+        std::string cmd = "cd pkgs && wget " + arg + " && chmod +x " + arg + ".min";
         system(cmd.c_str());
     }
 
