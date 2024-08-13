@@ -7,7 +7,12 @@ int main() {
     std::cin >> arg;
     if (arg == "update") {
         system("rm miniux.o");
-        system("wget ");
+        system("wget https://github.com/DevThatCodes/Miniux/releases/download/v0.04-alpha/miniux.o");
+    } else if (arg == "remove") {
+        std::cout << "pkg name> ";
+        std::cin >> arg;
+        std::string cmd = "rm pkgs/" + arg + ".min";
+        system(cmd.c_str());
     } else {
         std::string cmd = "cd pkgs && wget " + arg;
         system(cmd.c_str());
