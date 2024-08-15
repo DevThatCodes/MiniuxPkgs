@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
     std::ifstream f("Drive.json");
     json drvDat = json::parse(f);
     std::string cwd = argv[2];
-    json files = drvDat["users"][argv[1]]["files"]["content"];
+    json files = drvDat["users"][argv[1]]["files"];
     system("clear");
     std::cout << "files: " + cwd + "\n\n";
     if (cwd != "/") {
