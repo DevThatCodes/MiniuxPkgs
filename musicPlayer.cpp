@@ -13,5 +13,6 @@ int main(int argc, char* argv[]) {
     std::cin >> filePath;
     std::cout << (std::string) drvDat["users"][argv[1]]["dsplName"] + "\n";
 
+	f.close();
     return 0;
 }

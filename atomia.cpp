@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include "headers/json.hpp"
+#include "headers/moleculeMaker.hpp"
 using json = nlohmann::json;
 
 int main(int argc, char* argv[]) {
@@ -30,8 +31,16 @@ int main(int argc, char* argv[]) {
         if (dir == savePath.back()) {
             // if statement will get here if successfully found file. saveDat will equal the content of saveFile
             std::cout << "welcome to " << dir.erase(dir.size()-4, 4) << "\n";
-            std::cout << "what do you want to do:\n(l)ab: make new elements \n";
+            std::cout << "what do you want to do:\n(e)lement maker \n(m)olecule maker\n> ";
+            std::string arg;
+            std::cin >> arg;
+            system("clear");
+            if (arg == "m") {
+                MoleculeMaker mm;
+                std::string newSaveDat = mm.run(saveDat);
+            }
         }
+	f.close();
     return 0;
     }
 }
